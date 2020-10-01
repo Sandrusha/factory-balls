@@ -12,7 +12,18 @@
 <body>
     <div id="container">
         <h1>Factory Balls</h1>
-        <p class="info">Please check the code into the Console <span class="rocket bounce">🚀</span></p>
+        <!-- <p class="info">Please check the code into the Console <span class="rocket bounce">🚀</span></p> -->
+        <div id="generated-tables">
+            <button id="generate" onclick="generateBalls()">Generate tables</button>
+            <div id="tables">
+                <div id="main-table">Initial Balls:</div>
+                <div id="sorted-table">Sorted Balls:</div>
+            </div>
+        </div>
+        <div id="grouped-table">
+            <button id="solve" onclick="solveBalls()">Solve</button>
+            <div id="final-groups">Grouped Balls:<br></div>
+        </div>
     </div>
 
     <script src="main.js"></script>

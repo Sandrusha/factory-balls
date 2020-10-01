@@ -1,72 +1,95 @@
 body {
     background-color: #40407a;
     color: #f5f6fa;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1vw;
 }
 
 h1 {
     color: #ffb142;
     font-family: 'Walter Turncoat', cursive;
-    font-size: 3em;
+    font-size: 3vw;
+    flex-basis: 100%;
 }
 
-p {
+button {
     font-family: 'Epilogue', sans-serif;
-    font-size: 1.2em;
+    padding: .5vw 1vw;
+    width: 13vw;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 #container {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.info {
+#generate, #solve {
+    margin-bottom: 2vw;
+}
+
+td {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50px;
+}
+
+#generated-tables {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4vw;
+}
+
+#tables {
     display: flex;
 }
-.rocket {
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    transform-origin: bottom;
-    margin-left: 2px;
+
+#tables > div:first-child {
+    margin-right: 4vw;
 }
-.bounce {
-    animation-name: bounce;
-    animation-timing-function: ease;
-}
-@keyframes bounce {
-    0%   { transform: translateY(0); }
-    30%  { transform: translateY(-5px); }
-    50%  { transform: translateY(0); }
-    100% { transform: translateY(0); }
+
+@media only screen and (max-width: 1100px) {
+    body {
+        font-size: 2vw;
+    }
+
+    button {
+        padding: 1.5vw 1vw;
+        width: 20vw;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-    #container {
-        position: absolute;
-        top: 40%;
-        left: 30%;
-        transform: translate(-30%, -40%);
-    } 
+    body {
+        font-size: 5vw;
+    }
+    
     h1 {
         font-size: 2.2em;
     }
-}
 
-/* ----------- iPad Pro ----------- */
-/* Portrait and Landscape */
-@media only screen 
-    and (min-width: 1024px) 
-    and (max-height: 1366px) 
-    and (-webkit-min-device-pixel-ratio: 1.5) {
-        h1 {
-            font-size: 4em;
-        }
-
-        p {
-            font-size: 1.8em;
-        }
+    td {
+        width: 4vw;
+        height: 4vw;
     }
+
+    button {
+        padding: 1.5vw 1vw;
+        width: 40vw;
+    }
+
+    #container {
+        flex-direction: column;
+    }
+
+    #grouped-table {
+        margin-top: 2vw;
+    }
+}
 
 /* ----------- iPad ----------- */
 /* Portrait and Landscape */
@@ -74,11 +97,10 @@ p {
     and (min-device-width : 768px) 
     and (max-device-width : 1024px)  { 
         h1 {
-            font-size: 3em;
+            font-size: 6vw;
         }
-
-        p {
-            font-size: 1.8em;
+        body {
+            font-size: 3vw;
         }
     }
 
@@ -87,7 +109,10 @@ p {
     and (device-width : 375px) 
     and (device-height : 812px) 
     and (-webkit-device-pixel-ratio : 3) { 
+        body {
+            font-size: 3vw;
+        }
         h1 {
-            font-size: 2em;
+            font-size: 8vw;
         }
     }
