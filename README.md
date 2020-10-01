@@ -6,3 +6,16 @@
 6.	Create an array for the colors
 7.	Random generation of balls
 8.	Display the solution into the console
+
+Pseudocode for the Interface
+1.	Declare global variables
+2.	Inactivate the Solve button so that it cannot be clickable by mistake
+3.	Declare n and set a random value starting with 2 (maximum 10)
+4.	Build empty tables
+5.	Create empty arrays for balls and groups
+6.	Initialize current line to 0 (k = 0) (used when the balls start to be grouped)
+7.	Create timer and set initial value to NULL
+8.	Create buildTable()
+9.	Create generateBalls()
+10.	Create sortBalls() for the initial sorting of balls
+11.	Create sortBallsTable() to sort of balls each time is needed
